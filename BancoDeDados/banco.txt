@@ -1,0 +1,2 @@
+codigo;nome;preco_compra;preco_venda;peso;quantidade
+12345;produto teste;10;15;5;2
