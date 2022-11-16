@@ -68,7 +68,7 @@ namespace GerenciamentoProduto
             return produto;
         }
 
-        public void inserir(Produto produto)
+        public static void inserir(Produto produto)
         {
             var linhasBanco = File.ReadAllLines(dirArquivo).ToList();
             var novaLinha = montarLinhaBanco(produto);
@@ -78,7 +78,7 @@ namespace GerenciamentoProduto
             File.WriteAllLines(dirArquivo, linhasBanco);  
         }
 
-        public void excluir(String codigo)
+        public static void excluir(String codigo)
         {
             var linhasBanco = File.ReadAllLines(dirArquivo).ToList();
             var novasLinhasBanco = new List<string>();
@@ -95,7 +95,7 @@ namespace GerenciamentoProduto
             File.WriteAllLines(dirArquivo, novasLinhasBanco);
         }
 
-        public void atualizar(Produto novoProduto)
+        public static void atualizar(Produto novoProduto)
         {
             var novasLinhasBanco = new List<string>();
             var produtoAntigo = buscar(novoProduto.codigo);

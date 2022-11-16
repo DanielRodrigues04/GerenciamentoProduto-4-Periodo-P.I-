@@ -16,5 +16,10 @@ namespace GerenciamentoProduto
         {
             InitializeComponent();
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            Produto.excluir(txtBxCodigo.Text);
+        }
     }
 }

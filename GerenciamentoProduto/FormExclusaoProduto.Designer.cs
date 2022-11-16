@@ -137,6 +137,7 @@
             this.btnBuscar.TabIndex = 37;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // listViewProdutos
             // 
@@ -147,7 +148,7 @@
             this.listViewProdutos.TabIndex = 36;
             this.listViewProdutos.UseCompatibleStateImageBehavior = false;
             // 
-            // FormTelaExclusao
+            // FormExclusaoProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -158,7 +159,7 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.listViewProdutos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "FormTelaExclusao";
+            this.Name = "FormExclusaoProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTelaExclusao";
             this.menuStrip1.ResumeLayout(false);
