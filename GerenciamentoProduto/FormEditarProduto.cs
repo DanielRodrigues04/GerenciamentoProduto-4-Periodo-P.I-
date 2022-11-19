@@ -15,13 +15,27 @@ namespace GerenciamentoProduto
         public FormEditarProduto()
         {
             InitializeComponent();
+
+            Produto.exibirProdutos(listViewProdutos);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            var produto = Produto.buscar(txtBxCodigo.Text);
+            var codigo = txtBxCodigo.Text;
+            var produto = Produto.buscar(codigo);
 
-            Produto.atualizar(produto);
+            if (produto != null)
+            {
+                var telaCadastro = new FormCadastroProduto(codigo);
+
+                telaCadastro.ShowDialog();
+
+                Produto.exibirProdutos(listViewProdutos);
+            } 
+            else
+            {
+                MessageBox.Show("Não foi localizado produto para o código: " + codigo, "Produto não encontrado", MessageBoxButtons.OK);
+            }
         }
     }
 }

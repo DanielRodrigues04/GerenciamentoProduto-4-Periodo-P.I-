@@ -16,12 +16,13 @@ namespace GerenciamentoProduto
         public FormBemVindo()
         {
             InitializeComponent();
+
+            Produto.exibirProdutos(listViewProdutos);
         }
 
         private void novoProdutoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var telaCadastro = new FormCadastroProduto();
-            var produtos = Produto.buscarProdutos();
+            var telaCadastro = new FormCadastroProduto("");
 
             telaCadastro.ShowDialog();
         }

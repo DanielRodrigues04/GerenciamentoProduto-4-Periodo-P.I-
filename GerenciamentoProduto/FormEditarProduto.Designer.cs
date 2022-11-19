@@ -66,7 +66,7 @@
             this.menuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(989, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(673, 24);
             this.menuStrip1.TabIndex = 23;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -133,7 +133,7 @@
             this.listViewProdutos.HideSelection = false;
             this.listViewProdutos.Location = new System.Drawing.Point(12, 87);
             this.listViewProdutos.Name = "listViewProdutos";
-            this.listViewProdutos.Size = new System.Drawing.Size(965, 456);
+            this.listViewProdutos.Size = new System.Drawing.Size(650, 456);
             this.listViewProdutos.TabIndex = 31;
             this.listViewProdutos.UseCompatibleStateImageBehavior = false;
             // 
@@ -152,7 +152,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(989, 556);
+            this.ClientSize = new System.Drawing.Size(673, 556);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.listViewProdutos);
             this.Controls.Add(this.lblCodigo);

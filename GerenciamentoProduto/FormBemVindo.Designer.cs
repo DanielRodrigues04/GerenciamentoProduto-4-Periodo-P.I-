@@ -37,7 +37,7 @@
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controleDeEstoqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controleFinanceiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.listViewProdutos = new System.Windows.Forms.ListView();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +47,7 @@
             this.menuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(631, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(673, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -112,19 +112,21 @@
             this.controleFinanceiroToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.controleFinanceiroToolStripMenuItem.Text = "Controle financeiro";
             // 
-            // panel1
+            // listViewProdutos
             // 
-            this.panel1.Location = new System.Drawing.Point(12, 27);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(607, 487);
-            this.panel1.TabIndex = 2;
+            this.listViewProdutos.HideSelection = false;
+            this.listViewProdutos.Location = new System.Drawing.Point(12, 37);
+            this.listViewProdutos.Name = "listViewProdutos";
+            this.listViewProdutos.Size = new System.Drawing.Size(650, 456);
+            this.listViewProdutos.TabIndex = 32;
+            this.listViewProdutos.UseCompatibleStateImageBehavior = false;
             // 
             // FormBemVindo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(631, 526);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(673, 505);
+            this.Controls.Add(this.listViewProdutos);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
@@ -148,7 +150,7 @@
         private System.Windows.Forms.ToolStripMenuItem relatóriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem controleDeEstoqueToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem controleFinanceiroToolStripMenuItem;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ListView listViewProdutos;
     }
 }
 

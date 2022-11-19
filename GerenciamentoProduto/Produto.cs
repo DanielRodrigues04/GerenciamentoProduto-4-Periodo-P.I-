@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GerenciamentoProduto
 {
@@ -17,6 +18,40 @@ namespace GerenciamentoProduto
         int quantidade;
 
         private static string dirArquivo = Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory.ToString()) + "/banco.txt";
+
+        public static void exibirProdutos(ListView listView)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+
+            listView.Clear();
+            listView.View = View.Details;
+            listView.LabelEdit = false;
+            listView.AllowColumnReorder = false;
+            listView.FullRowSelect = false;
+            listView.GridLines = true;
+
+            listView.Columns.Add("Código", 70, HorizontalAlignment.Left);
+            listView.Columns.Add("Nome", 250, HorizontalAlignment.Left);
+            listView.Columns.Add("Peso", 50, HorizontalAlignment.Left);
+            listView.Columns.Add("Preço compra", 100, HorizontalAlignment.Left);
+            listView.Columns.Add("Preço venda", 100, HorizontalAlignment.Left);
+            listView.Columns.Add("Quantidade", 70, HorizontalAlignment.Left);
+
+            buscarProdutos()
+                .OrderBy(p => p.codigo)
+                .ToList()
+                .ForEach(produto => {
+                    var listViewItem = new ListViewItem(produto.codigo);
+                    listViewItem.SubItems.Add(produto.nome);
+                    listViewItem.SubItems.Add(produto.peso.ToString());
+                    listViewItem.SubItems.Add(produto.precoCompra.ToString());
+                    listViewItem.SubItems.Add(produto.precoVenda.ToString());
+                    listViewItem.SubItems.Add(produto.quantidade.ToString());
+                    listView.Items.Add(listViewItem);
+                });
+
+            Cursor.Current = Cursors.Default;
+        }
 
         public Produto(string codigo, string nome, double peso, double precoCompra, double precoVenda, int quantidade)
         {
